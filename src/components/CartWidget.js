@@ -3,7 +3,7 @@ import { TfiShoppingCart } from "react-icons/tfi";
 
 const CartWidget = () => {
     return (
-        <TfiShoppingCart/>
+        <TfiShoppingCart className="cartIcon"/>
     )
 }
 
