@@ -9,14 +9,14 @@ const Productos = () => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    if (idCategory == undefined) {
+    if (idCategory === undefined) {
       customFetch(2000, productosArray)
         .then((response) => setData(response))
         .catch((err) => console.log(err));
     } else {
       customFetch(
         2000,
-        productosArray.filter((item) => item.idCategory == idCategory)
+        productosArray.filter((item) => item.idCategory === idCategory)
       )
         .then((response) => setData(response))
         .catch((err) => console.log(err));

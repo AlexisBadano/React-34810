@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom"
+
 <link
   href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
   rel="stylesheet"
 ></link>;
 
+
 const Producto = (props) => {
   return (
-    <a className="card" href="../public/index.html">
+    <Link to={`/item/${props.id}`} className="card" href="../public/index.html">
       <div className="">
-        <img className="card__background" src={props.imagen} />
+        <img className="card__background" src={props.imagen} alt="Foto de producto" />
       </div>
 
       <div className="card__content">
@@ -15,7 +18,7 @@ const Producto = (props) => {
         <h3 className="card__heading">{props.title}</h3>
         <h3 className="card__price">${props.price}</h3>
       </div>
-    </a>
+    </Link>
   );
 };
 

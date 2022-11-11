@@ -1,15 +1,28 @@
 
-const ItemDetail = ({ item }) => {
-
-        return (
-    <div>
-        <div>
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
-          <p>{item.price}</p>
-        </div>
-    </div>
-  )
+const ItemDetail = ({item}) =>  {
+    return (
+        <>
+        {
+            item
+            ? 
+            <div>
+                <h1>
+                    <div>
+                        <img src= {item.pictureUrl} />
+                    </div>
+                    <div>
+                        <h2>{item.title}</h2>
+                        <p>{item.price}</p>
+                        <p>$ {item.price}</p>
+                        <p>{item.price} unidades en stock</p>
+                    </div>
+                
+                </h1>
+            </div>
+            : <p>Cargando...</p>
+        }
+        </>
+    );
 }
 
 export default ItemDetail;
