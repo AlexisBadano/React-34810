@@ -47,6 +47,7 @@ a {
 .cartIcon {
    font-size: 2rem;
    height: inherit;
+   list-style: none;
 
 }
 

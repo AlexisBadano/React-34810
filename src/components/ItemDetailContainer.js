@@ -4,8 +4,6 @@ import { customFetch } from "../utils/customFetch";
 import ItemDetail from "./ItemDetail";
 import { productosArray } from "../utils/arrayProductos";
 
-// const { products } = require('../utils/arrayProductos');
-
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
     const { idItem } = useParams();
