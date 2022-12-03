@@ -9,10 +9,14 @@ const Cart = () => {
     <>
       <h1>TU Carrito:</h1>
       <ul>
-        {productos.length === 0 ? (
-          <li>No tienes ningún producto en Carrito 😪!</li>
-        ) : (
-          productos.map((item) => <li>{item.name}</li>)
+        {productos.cartList.length === 0 
+        ? (<li>No tienes ningún producto en Carrito 😪!</li>)
+        : (productos.cartList.map((item) => 
+        <>
+             <li>{item.nameItem}</li>
+             <li>{item.qtyItem}</li>
+             <li><button onClick={() => productos.removeItem(item.idItem)}>Remover</button></li>
+        </>)
         )}
       </ul>
     </>

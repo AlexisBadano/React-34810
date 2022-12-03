@@ -8,6 +8,7 @@ export const productosArray = [
     idCategory: 1,
     id: 100,
     price: 685999,
+    stock: 100
   },
   {
     title: "Dean Dimebag Darrel Edition",
@@ -18,6 +19,7 @@ export const productosArray = [
     idCategory: 1,
     id: 101,
     price: 99750,
+    stock: 100
   },
   {
     title: "B.C Rich Warlock Kerry King",
@@ -28,6 +30,7 @@ export const productosArray = [
     idCategory: 1,
     id: 102,
     price: 135695,
+    stock: 100
   },
   {
     title: "Epiphone Modern Collection Les Paul Studio",
@@ -38,9 +41,10 @@ export const productosArray = [
     idCategory: 1,
     id: 103,
     price: 285695,
+    stock: 100
   },
   {
-    title: "Bajo Squier Classic Vibe Precission",
+    title: "Squier Classic Vibe Precission",
     imagen: [
       "https://http2.mlstatic.com/D_NQ_NP_2X_999433-MLA51837006139_102022-F.webp"
     ],
@@ -48,9 +52,10 @@ export const productosArray = [
     idCategory: 2,
     id: 200,
     price: 106500,
+    stock: 100
   },
   {
-    title: "Bajo Squier by Fender Precission",
+    title: "Squier by Fender Precission",
     imagen: [
       "https://http2.mlstatic.com/D_NQ_NP_2X_812186-MLA47477985002_092021-F.webp"
     ],
@@ -58,9 +63,10 @@ export const productosArray = [
     idCategory: 2,
     id: 201,
     price: 266000,
+    stock: 100
   },
   {
-    title: "Bajo Yamaha BB",
+    title: "Yamaha BB",
     imagen: [
       "https://http2.mlstatic.com/D_NQ_NP_2X_665624-MLA49867154528_052022-F.webp"
     ],
@@ -68,6 +74,7 @@ export const productosArray = [
     idCategory: 2,
     id: 202,
     price: 261750,
+    stock: 100
   },
   {
     title: "Pedal Boss MetalZone MT-3",
@@ -78,9 +85,10 @@ export const productosArray = [
     idCategory: 3,
     id: 300,
     price: 36500,
+    stock: 100
   },
   {
-    title: "Pedal Boss Compressor",
+    title: "Pedal Boss Chorus",
     imagen: [
       "https://http2.mlstatic.com/D_NQ_NP_2X_838426-MLA40682816937_022020-F.webp"
     ],
@@ -88,6 +96,7 @@ export const productosArray = [
     idCategory: 3,
     id: 301,
     price: 56500,
+    stock: 100
   },
   {
     title: "Pedal Boss Compressor",
@@ -98,5 +107,6 @@ export const productosArray = [
     idCategory: 3,
     id: 302,
     price: 46500,
+    stock: 100
   },
 ];

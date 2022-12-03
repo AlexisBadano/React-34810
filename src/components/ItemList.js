@@ -12,6 +12,7 @@ const ItemList = ({ items }) => {
           idCategory={item.idCategory}
           id={item.id}
           price={item.price}
+          stock={item.stock}
         />
       ))}
     </>
