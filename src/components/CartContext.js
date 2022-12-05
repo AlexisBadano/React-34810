@@ -73,7 +73,7 @@ const CartContextProvider = (props) => {
   const subTotal = () => {
     let subTotal = cartList.map((item) => pricePerItem(item.idItem));
     return subTotal.reduce(
-      (previousValue, currentValue) => previousValue + currentValue
+      (previousValue, currentValue) => previousValue + currentValue, 0
     );
   };
 

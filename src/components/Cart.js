@@ -67,6 +67,7 @@ const Cart = () => {
                 </button>
               </li>
             </>
+            
           ))
         )}
       </ul>
@@ -83,7 +84,7 @@ const Cart = () => {
           </div>
         ) : (
           <div>
-            <button
+            <button className="buy__button__disabled"
               onClick={() => {
                 alert("No tienes ningun producto en el carrito!");
               }}
@@ -93,6 +94,10 @@ const Cart = () => {
           </div>
         )}
       </ul>
+
+      <div>
+        {productos.total()}
+      </div>
     </>
   );
 };
