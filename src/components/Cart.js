@@ -28,7 +28,6 @@ const Cart = () => {
         qty: item.qtyItem,
       })),
     };
-    console.log(order);
 
     const sendOrderToFirebase = async () => {
       const newOrderRef = doc(collection(db, "orders"));

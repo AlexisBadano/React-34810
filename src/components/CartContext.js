@@ -8,7 +8,6 @@ const CartContextProvider = (props) => {
   // Function that adds the products and their quantity to the Cart
 
   const addToCart = (item, qty) => {
-    console.log(item, qty);
     const alreadyInCart = cartList.find((prod) => prod.idItem == item.id);
     if (qty == 0) {
       alert("Debes elegir al menos 1 producto");

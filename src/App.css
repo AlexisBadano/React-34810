@@ -12,7 +12,10 @@ header {
 }
 
 .brand{ 
+    padding-left:0.25rem ;
     width: 25%;
+    color: black;
+    font-size: 30px;
 }
 
 .navBar {

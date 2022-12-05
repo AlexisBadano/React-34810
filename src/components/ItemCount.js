@@ -8,7 +8,6 @@ const ItemCount = ({ stock, initial,  addItemButton }) => {
     },[])
 
     const sumar = () => {
-        // console.log(stock) // Control
         if (counter < stock)
         {
         setCounter(counter + 1)}
