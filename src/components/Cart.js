@@ -49,32 +49,46 @@ const Cart = () => {
   };
 
   return (
-    <>
+    <div className="cart__container">
       <h1>Tu Carrito:</h1>
-      <ul>
+      <div className="cart__container2">
+      <ul className="cart__items">
         {productos.cartList.length === 0 ? (
           <li>No tienes ningún producto en Carrito 😪!</li>
         ) : (
           productos.cartList.map((item) => (
-            <>
-              <li>{item.nameItem}</li>
-              <li>{item.qtyItem}</li>
-              <li>{productos.pricePerItem(item.idItem)}</li>
-              
-              <li>
-                <button className="remove__button" onClick={() => productos.removeItem(item.idItem)}>
+            <div className="cart__list__container">
+              <div className="cart__list__title"> Producto:
+                <li className="cart__list__item">{item.nameItem}</li>
+              </div>
+              <div className="cart__list__title"> Cantidad:
+                <li className="cart__list__item">{item.qtyItem}</li>
+              </div>
+              <div className="cart__list__title"> Total:
+                <li className="cart__list__item">
+                  ${productos.pricePerItem(item.idItem)}
+                </li>
+              </div>
+
+              <li className="cart__list__item">
+                <button
+                  className="remove__button"
+                  onClick={() => productos.removeItem(item.idItem)}
+                >
                   Remover
                 </button>
               </li>
-            </>
-            
+            </div>
           ))
         )}
       </ul>
-      <ul>
+      
+      <ul className="cart__summary">
         {productos.cartList.length !== 0 ? (
-          <div>
-            <button className="buy__button"
+          <div className="cart__summary__container">Total:
+            <div>${productos.total()}</div>
+            <button
+              className="buy__button"
               onClick={() => {
                 createOrder();
               }}
@@ -82,9 +96,11 @@ const Cart = () => {
               Finalizar la compra
             </button>
           </div>
+          
         ) : (
           <div>
-            <button className="buy__button__disabled"
+            <button
+              className="buy__button__disabled"
               onClick={() => {
                 alert("No tienes ningun producto en el carrito!");
               }}
@@ -94,11 +110,8 @@ const Cart = () => {
           </div>
         )}
       </ul>
-
-      <div>
-        {productos.total()}
-      </div>
-    </>
+    </div>
+    </div>
   );
 };
 

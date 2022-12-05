@@ -34,3 +34,44 @@
     font-size: 20px;
     background-color: rgb(211, 217, 221);
   }
+
+  .cart__items{
+    display: flex;
+    flex-direction: column;
+    width: 75%
+  }
+
+  .cart__list__item{
+    padding: 1rem;
+  }
+
+  .cart__list__title{
+    text-align: center;
+  }
+
+  .cart__list__container{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: solid slateblue ;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart__container2{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart__summary{
+    margin-right: 3rem;
+    width: auto;
+    max-height: 30vh;
+  }
+
+  .cart__summary__container{
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
