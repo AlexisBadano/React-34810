@@ -20,12 +20,12 @@ const ItemCount = ({ stock, initial,  addItemButton }) => {
     }
 
     return (
-        <>
-           <li> <button onClick={sumar}>+</button></li>
-           <li> <button onClick={restar}>-</button></li>
-           <li>cantidad: {counter}</li>
-           <li><button onClick={() => addItemButton(counter)}>AGREGAR AL CARRITO</button></li>
-        </>
+        <ul className="buttons__ontainer">
+           <li> <button className="qty__button" onClick={sumar}>+</button></li>
+           <li> <button className="qty__button" onClick={restar}>-</button></li>
+           <li className="cantidad">{counter}</li>
+           <li><button className="add__button" onClick={() => addItemButton(counter)}>AGREGAR AL CARRITO</button></li>
+        </ul>
     )
 }
 

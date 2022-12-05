@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import './css/card.css';
 import './css/cartWidget.css';
+import './css/itemDetail.css'
+import './css/cart.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

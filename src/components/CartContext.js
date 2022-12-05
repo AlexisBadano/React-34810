@@ -5,6 +5,8 @@ export const CartContext = createContext();
 const CartContextProvider = (props) => {
   const [cartList, setCartList] = useState([]);
 
+  // Function that adds the products and their quantity to the Cart
+
   const addToCart = (item, qty) => {
     console.log(item, qty);
     const alreadyInCart = cartList.find((prod) => prod.idItem == item.id);
@@ -36,23 +38,63 @@ const CartContextProvider = (props) => {
     }
   };
 
+  // Function for clearing the Cart
+
   const clearCart = () => {
     setCartList([]);
   };
+
+  // Function for removen a certain Item
 
   const removeItem = (id) => {
     let result = cartList.filter((item) => item.idItem != id);
     setCartList(result);
   };
 
-    const itemsQty = () => {
-      let qty = cartList.map(item => item.qtyItem);
-      return qty.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
-  }
+  // Function for calculating how many items are there in the Cart
+
+  const itemsQty = () => {
+    let qty = cartList.map((item) => item.qtyItem);
+    return qty.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      0
+    );
+  };
+
+  // Function to calculate the price per the qty of the Items
+
+  const pricePerItem = (idItem) => {
+    let itemIndex = cartList.map((item) => item.idItem).indexOf(idItem);
+    return cartList[itemIndex].costItem * cartList[itemIndex].qtyItem;
+  };
+
+  // Function to calculate the subTotal of all the items
+
+  const subTotal = () => {
+    let subTotal = cartList.map((item) => pricePerItem(item.idItem));
+    return subTotal.reduce(
+      (previousValue, currentValue) => previousValue + currentValue
+    );
+  };
+
+  // Function to show the total of all the subTotals
+
+  const total = () => {
+    return subTotal();
+  };
 
   return (
     <CartContext.Provider
-      value={{ cartList, addToCart, clearCart, removeItem, itemsQty }}
+      value={{
+        cartList,
+        addToCart,
+        clearCart,
+        removeItem,
+        itemsQty,
+        pricePerItem,
+        subTotal,
+        total,
+      }}
     >
       {props.children}
     </CartContext.Provider>

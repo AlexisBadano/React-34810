@@ -1,6 +1,13 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import { collection, doc, serverTimestamp, setDoc, increment, updateDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  serverTimestamp,
+  setDoc,
+  increment,
+  updateDoc,
+} from "firebase/firestore";
 import db from "../utils/firebaseConfig";
 
 const Cart = () => {
@@ -43,7 +50,7 @@ const Cart = () => {
 
   return (
     <>
-      <h1>TU Carrito:</h1>
+      <h1>Tu Carrito:</h1>
       <ul>
         {productos.cartList.length === 0 ? (
           <li>No tienes ningún producto en Carrito 😪!</li>
@@ -52,8 +59,10 @@ const Cart = () => {
             <>
               <li>{item.nameItem}</li>
               <li>{item.qtyItem}</li>
+              <li>{productos.pricePerItem(item.idItem)}</li>
+              
               <li>
-                <button onClick={() => productos.removeItem(item.idItem)}>
+                <button className="remove__button" onClick={() => productos.removeItem(item.idItem)}>
                   Remover
                 </button>
               </li>
@@ -64,7 +73,7 @@ const Cart = () => {
       <ul>
         {productos.cartList.length !== 0 ? (
           <div>
-            <button
+            <button className="buy__button"
               onClick={() => {
                 createOrder();
               }}
